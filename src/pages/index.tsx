@@ -15,7 +15,7 @@ export default function Home() {
           h-4
           bg-transparent
           border-0
-          text="red hover:purple-500"
+          text="blue-300 hover:blue-500"
           cursor-pointer
           onClick={() => setOpen(!open)}
         >click me</button>
@@ -24,7 +24,6 @@ export default function Home() {
             <MotionBtn
               style={{ all: "unset" }}
               whileTap={{ scale: 0.9 }}
-              whileHover={{ scale: 1.05 }}
               onClick={() => setOpen(!open)}
             >
               <div text="red hover:purple-500" cursor-pointer>

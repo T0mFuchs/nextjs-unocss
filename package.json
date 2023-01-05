@@ -16,7 +16,6 @@
     "@unocss/preset-attributify": "^0.48.0",
     "@unocss/preset-uno": "^0.48.0",
     "@unocss/transformer-attributify-jsx": "^0.48.0",
-    "@unocss/transformer-compile-class": "^0.48.0",
     "@unocss/webpack": "^0.48.0",
     "eslint": "8.31.0",
     "eslint-config-next": "13.0.1",

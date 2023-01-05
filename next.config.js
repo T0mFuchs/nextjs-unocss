@@ -2,7 +2,6 @@ const unoCSS = require('@unocss/webpack').default
 const presetUno = require('@unocss/preset-uno').default
 const presetAttributify = require('@unocss/preset-attributify').default
 const transformerAttributifyJsx = require('@unocss/transformer-attributify-jsx')
-const transformerCompileClass = require('@unocss/transformer-compile-class')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,7 +17,6 @@ const nextConfig = {
         ],
         transformers: [
           transformerAttributifyJsx(),
-          transformerCompileClass(),
         ],
         shortcuts: {
 
