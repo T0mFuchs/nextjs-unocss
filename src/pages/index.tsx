@@ -1,37 +1,59 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-const Dialog = dynamic(() => import("ui/dialog"), { ssr: false });
-const MotionBtn = dynamic(() => import("ui/motion/button"), { ssr: false });
-// const MotionDiv = dynamic(() => import("ui/motion/div"), { ssr: false });
+
+const loadMinFeatures = () =>
+  import("lib/fm/features-min.js").then((res) => res.default);
+
+const LazyMotion = dynamic(() => import("ui/LazyMotion"));
+
+const MButton = dynamic(() => import("ui/m/button"), { ssr: false });
+
+const Dialog = dynamic(() => import("ui/dialog"), { suspense: true });
+
 
 export default function Home() {
   const [open, setOpen] = React.useState(false);
   return (
     <>
       <main grid justify-center>
-        <div pt-5/>
-        <button
-          h-4
-          bg-transparent
-          border-0
-          text="blue-300 hover:blue-500"
-          cursor-pointer
-          onClick={() => setOpen(!open)}
-        >click me</button>
-        <React.Suspense>
-          <Dialog open={open} onOpenChange={setOpen}>
-            <MotionBtn
-              style={{ all: "unset" }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setOpen(!open)}
-            >
-              <div text="red hover:purple-500" cursor-pointer>
+        <div pt-5 />
+        <LazyMotion strict features={loadMinFeatures}>
+          <MButton
+            text="hover:red"
+            cursor-pointer
+            bg-transparent
+            px-1
+            border-0
+            rounded-md
+            focus:border
+            focus:outline-none
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setOpen(!open)}
+          >
+            click me
+          </MButton>
+          <React.Suspense>
+            <Dialog open={open} onOpenChange={setOpen}>
+              <MButton
+                text="red hover:green"
+                cursor-pointer
+                bg-transparent
+                px-1
+                border-0
+                rounded-md
+                focus:border
+                focus:outline-none
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setOpen(!open)}
+              >
                 close btn
-              </div>
-            </MotionBtn>
-          </Dialog>
-        </React.Suspense>
+              </MButton>
+            </Dialog>
+          </React.Suspense>
+        </LazyMotion>
       </main>
     </>
   );
