@@ -2,8 +2,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 
-const loadMinFeatures = () =>
-  import("lib/fm/features-min.js").then((res) => res.default);
+const loadMin = () =>
+  import("lib/anims/min").then((res) => res.default);
 
 const LazyMotion = dynamic(() => import("ui/LazyMotion"));
 
@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <main grid justify-center>
         <div pt-5 />
-        <LazyMotion strict features={loadMinFeatures}>
+        <LazyMotion strict features={loadMin}>
           <MButton
             text="hover:red"
             cursor-pointer
