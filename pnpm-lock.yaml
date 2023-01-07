@@ -10,11 +10,10 @@ specifiers:
   '@unocss/preset-attributify': ^0.48.0
   '@unocss/preset-uno': ^0.48.0
   '@unocss/transformer-attributify-jsx': ^0.48.0
-  '@unocss/transformer-compile-class': ^0.48.0
   '@unocss/webpack': ^0.48.0
   eslint: 8.31.0
   eslint-config-next: 13.0.1
-  framer-motion: ^8.1.7
+  framer-motion: ^8.2.0
   next: 13.0.1
   preact: ^10.11.3
   prettier: ^2.8.1
@@ -33,11 +32,10 @@ dependencies:
   '@unocss/preset-attributify': 0.48.0
   '@unocss/preset-uno': 0.48.0
   '@unocss/transformer-attributify-jsx': 0.48.0
-  '@unocss/transformer-compile-class': 0.48.0
   '@unocss/webpack': 0.48.0
   eslint: 8.31.0
   eslint-config-next: 13.0.1_iukboom6ndih5an6iafl45j2fe
-  framer-motion: 8.1.7_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 8.2.4_biqbaboplfbrettd7655fr4n2y
   next: 13.0.1_biqbaboplfbrettd7655fr4n2y
   preact: 10.11.3
   prettier: 2.8.1
@@ -1674,8 +1672,8 @@ packages:
       is-callable: 1.2.7
     dev: false
 
-  /framer-motion/8.1.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-9ODjhOG1/XEDckJlva+5Ya2dvpBsz1ieX9DhAVGp1/IyrLuO3LSUIhj0vMX3Hr3Ujju0ebsMqFoedy84cz+9LQ==}
+  /framer-motion/8.2.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-bd2g3kgb8m0jBi+OOzsKPW4rQCn5gOOlbAlT0iMX6ruQPZ9qzIIABrRj2DFhwW6EcFvfJSP6EVVHSI8SQYBBOw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
